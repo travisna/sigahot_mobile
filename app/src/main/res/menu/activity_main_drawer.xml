@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_halaman_awal"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Halaman Awal" />
+        <item
+            android:id="@+id/nav_ubah_profil"
+            android:icon="@drawable/ic_cached_black_24dp"
+            android:title="Rincian Profil" />
+
+        <item
+            android:id="@+id/nav_cari_kamar"
+            android:icon="@drawable/ic_search_black_24dp"
+            android:title="Cari Kamar" />
+        <item
+            android:id="@+id/nav_riwayat_reservasi"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="Riwayat Reservasi" />
+        <item
+            android:id="@+id/nav_detil_reservasi"
+            android:icon="@drawable/ic_description_black_24dp"
+            android:title="Rincian Reservasi" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Keluar" />
+    </group>
+
+</menu>
