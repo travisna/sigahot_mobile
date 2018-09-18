@@ -72,5 +72,17 @@ public class HalamanAwal extends Fragment {
                 ft.commit();
             }
         });
+
+        btnCariKamar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment cariKamar = new CariKamar();
+
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.fragment_container,cariKamar);
+
+                ft.commit();
+            }
+        });
     }
 }

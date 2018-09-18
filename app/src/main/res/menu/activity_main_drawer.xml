@@ -7,7 +7,7 @@
         <item
             android:id="@+id/nav_halaman_awal"
             android:icon="@drawable/ic_home_black_24dp"
-            android:title="Halaman Awal" />
+            android:title="Beranda" />
         <item
             android:id="@+id/nav_ubah_profil"
             android:icon="@drawable/ic_cached_black_24dp"

@@ -18,8 +18,8 @@
         app:srcCompat="@drawable/gah_clear" />
 
     <FrameLayout
-        android:layout_width="372dp"
-        android:layout_height="328dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="164dp"
@@ -27,13 +27,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/txtInformasiHote"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/primary_text"
-            android:textSize="18sp"
-            tools:text="Informasi Hotel" />
+        <ScrollView
+            android:id="@+id/scrollView10"
+            android:layout_width="match_parent"
+            android:keepScreenOn="true"
+            android:scrollbarStyle="insideInset"
+            android:layout_height="match_parent"
+            >
+
+                <TextView
+                    android:id="@+id/txtInformasiHote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_light"
+                    android:textColor="@color/primary_text"
+                    android:textSize="18sp"
+                    android:scrollbars="vertical"
+                    android:isScrollContainer="true"
+                    tools:text="Informasi Hotel" />
+
+        </ScrollView>
+
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

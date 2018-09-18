@@ -92,7 +92,8 @@
             android:textColor="@color/primary_text"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view2" />
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            android:fontFamily="@font/open_sans_light"/>
 
         <TextView
             android:id="@+id/txtViewLuas"
@@ -104,6 +105,7 @@
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtViewKapasitas"
+            android:fontFamily="@font/open_sans_light"
             tools:text="Luas : 36 meter persegi" />
 
         <TextView
@@ -116,6 +118,7 @@
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtViewLuas"
+            android:fontFamily="@font/open_sans_light"
             tools:text="Pemandangan : Kota" />
 
         <TextView
@@ -128,6 +131,7 @@
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtViewPemandangan"
+            android:fontFamily="@font/open_sans_light"
             tools:text="Jumlah Twin : 1" />
 
         <TextView
@@ -140,7 +144,22 @@
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtJumlahBed1"
-            tools:text="Jumlah Double : 1" />
+            android:fontFamily="@font/open_sans_light"
+            tools:text="Jumlah Double" />
+
+        <TextView
+            android:id="@+id/txtJumlahBed3"
+            android:fontFamily="@font/open_sans_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+
+            android:layout_marginTop="16dp"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtJumlahBed2"
+            tools:text="Jumlah King : 1" />
 
         <View
             android:id="@+id/view11"
@@ -149,19 +168,21 @@
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="12dp"
+
             android:background="@color/divider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtJumlahBed2" />
+            app:layout_constraintTop_toBottomOf="@+id/txtJumlahBed3" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/textViewHarga"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
             android:textColor="@color/primary_text"
             android:textSize="32sp"
             app:layout_constraintStart_toStartOf="parent"

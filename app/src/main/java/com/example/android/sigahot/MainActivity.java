@@ -100,20 +100,22 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Fragment fragment = null;
-
+        Bundle b = new Bundle();
 
         if (id == R.id.nav_halaman_awal) {
             fragment = new HalamanAwal();
         } else if (id == R.id.nav_ubah_profil) {
             fragment = new DetilProfil();
-
         } else if (id == R.id.nav_cari_kamar) {
-
-
+            fragment = new CariKamar();
         } else if (id == R.id.nav_riwayat_reservasi) {
-
+            b.putString("status","'Check-In','Batal'");
+            fragment = new ListReservasi();
+            fragment.setArguments(b);
         } else if (id == R.id.nav_detil_reservasi) {
-
+            b.putString("status","'Aktif'");
+            fragment = new ListReservasi();
+            fragment.setArguments(b);
         } else if (id == R.id.nav_logout) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Konfirmasi");

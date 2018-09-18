@@ -3,12 +3,15 @@ package com.example.android.sigahot;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
@@ -34,23 +37,30 @@ public class RegistrasiActivity extends AppCompatActivity {
     EditText txtNama,txtEmail,txtPassword,txtJawaban;
     Button btnRegistrasi;
     ConnectionDetector cd;
+    private RadioGroup radioGroup;
+    RadioButton radioButton;
 
-    String nama,email,password,jawaban;
+    String nama,email,password,jawaban,jenisKelamin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi);
 
+
+
         txtNama = findViewById(R.id.editTextRegNama);
         txtEmail = findViewById(R.id.editTextRegEmail);
         txtPassword = findViewById(R.id.editTextRegPassword);
-        txtJawaban = findViewById(R.id.editTextRegPertanyaan);
+        txtJawaban = findViewById(R.id.editTextUbahPassPertanyaan);
         btnRegistrasi = findViewById(R.id.buttonRegistrasi);
+        radioGroup = findViewById(R.id.radioGroupJenisKelamin);
+
 
         nama="";
         email="";
         password="";
         jawaban="";
+        jenisKelamin="";
 
         cd = new ConnectionDetector(this);
 
@@ -70,6 +80,11 @@ public class RegistrasiActivity extends AppCompatActivity {
         password = txtPassword.getText().toString();
         jawaban = txtJawaban.getText().toString();
 
+        if(nama.length()>50){
+            Toast.makeText(RegistrasiActivity.this,"Nama tidak boleh lebih dari 50 karakter", Toast.LENGTH_SHORT).show();
+            cek = 0;
+        }
+
         if(password.length()>16){
             Toast.makeText(RegistrasiActivity.this,"Password tidak boleh lebih dari 16 karakter", Toast.LENGTH_SHORT).show();
             cek = 0;
@@ -80,11 +95,16 @@ public class RegistrasiActivity extends AppCompatActivity {
             cek = 0;
         }
 
+        int idJenisKelamin = radioGroup.getCheckedRadioButtonId();
+        radioButton = (RadioButton) findViewById(idJenisKelamin);
+        jenisKelamin = radioButton.getText().toString();
+
+
         if(cek==1)
-            registrasi(nama,email,password,jawaban);
+            registrasi(nama,email,password,jawaban,jenisKelamin);
     }
 
-    private void registrasi(final String nama, String email, String password, String jawaban){
+    private void registrasi(final String nama, final String email, String password, String jawaban, String jenisK){
 
 
         class registrasiAsync extends AsyncTask<String,Void,String>{
@@ -103,7 +123,8 @@ public class RegistrasiActivity extends AppCompatActivity {
                         namaLengkap = strings[0],
                         emailPengguna = strings[1],
                         pass = strings[2],
-                        jawaban = strings[3];
+                        jawaban = strings[3],
+                        jenisKel = strings[4];
 
                 InputStream is = null;
                 List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
@@ -111,6 +132,7 @@ public class RegistrasiActivity extends AppCompatActivity {
                 nameValuePairs.add(new BasicNameValuePair("email", emailPengguna));
                 nameValuePairs.add(new BasicNameValuePair("kata_sandi", pass));
                 nameValuePairs.add(new BasicNameValuePair("pertanyaan_unik", jawaban));
+                nameValuePairs.add(new BasicNameValuePair("jenis_kelamin", jenisKel));
 
                 String result = null;
 
@@ -155,6 +177,11 @@ public class RegistrasiActivity extends AppCompatActivity {
                 if(cd.isConnected()){
                     if(s.equalsIgnoreCase("success")){
 
+                        SharedPreferences.Editor editor = getSharedPreferences("userdata", MODE_PRIVATE).edit();
+                        editor.putString("email_pengguna",email);
+                        editor.commit();
+
+
                         Intent intent = new Intent(RegistrasiActivity.this, MainActivity.class);
                         finish();
                         Toast.makeText(getApplicationContext(), "Selamat datang"+nama, Toast.LENGTH_LONG).show();
@@ -173,6 +200,6 @@ public class RegistrasiActivity extends AppCompatActivity {
             }
         }
         registrasiAsync ra = new registrasiAsync();
-        ra.execute(nama,email,password,jawaban);
+        ra.execute(nama,email,password,jawaban,jenisK);
     }
 }

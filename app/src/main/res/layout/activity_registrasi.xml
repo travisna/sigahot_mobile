@@ -24,14 +24,14 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Nama Lengkap"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+        android:fontFamily="@font/open_sans_light"/>
 
     <EditText
         android:id="@+id/editTextRegEmail"
@@ -46,7 +46,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegNama" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextRegNama"
+        android:fontFamily="@font/open_sans_light"/>
 
     <EditText
         android:id="@+id/editTextRegPassword"
@@ -61,7 +62,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextRegEmail"
+        android:fontFamily="@font/open_sans_light"
+        />
 
     <Button
         android:id="@+id/buttonRegistrasi"
@@ -69,12 +72,13 @@
         android:layout_height="53dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/primary"
         android:text="Registrasi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegPertanyaan" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextUbahPassPertanyaan"
+        android:fontFamily="@font/open_sans_light"/>
 
     <TextView
         android:id="@+id/textViewNamaPelangganDrawer"
@@ -82,27 +86,63 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text="@string/secret_question"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupJenisKelamin"
+        android:fontFamily="@font/open_sans_light"/>
 
     <EditText
-        android:id="@+id/editTextRegPertanyaan"
+        android:id="@+id/editTextUbahPassPertanyaan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Jawaban"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNamaPelangganDrawer" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewNamaPelangganDrawer"
+        android:fontFamily="@font/open_sans_light"/>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupJenisKelamin"
+        android:layout_width="256dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRegPassword">
+
+        <RadioButton
+            android:id="@+id/radioButtonLaki"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="Laki-laki"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="303dp"
+            android:fontFamily="@font/open_sans_light"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonPerempuan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="177dp"
+            tools:layout_editor_absoluteY="303dp"
+            android:fontFamily="@font/open_sans_light"/>
+    </RadioGroup>
 
 
 </android.support.constraint.ConstraintLayout>

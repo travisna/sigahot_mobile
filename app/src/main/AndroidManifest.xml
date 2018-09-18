@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.sigahot">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -21,10 +21,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistrasiActivity" />
+        <activity android:name=".RincianListReservasi" />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UbahPassword" />
+        <activity android:name=".ResetPass" />
+        <activity android:name=".ActivityPegawai"></activity>
     </application>
 
 </manifest>

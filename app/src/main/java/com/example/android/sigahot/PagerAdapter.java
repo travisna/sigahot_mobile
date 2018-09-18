@@ -20,25 +20,25 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        InformasiKamar informasiKamar = new InformasiKamar();
+        DetilKamar detilKamar = new DetilKamar();
         Bundle bundle = new Bundle();
         switch (position){
             case 0:
                 bundle.putString("jenis_kamar","Superior");
-                informasiKamar.setArguments(bundle);
-                return informasiKamar;
+                detilKamar.setArguments(bundle);
+                return detilKamar;
             case 1:
                 bundle.putString("jenis_kamar","Double Deluxe");
-                informasiKamar.setArguments(bundle);
-                return informasiKamar;
+                detilKamar.setArguments(bundle);
+                return detilKamar;
             case 2:
                 bundle.putString("jenis_kamar","Executive Deluxe");
-                informasiKamar.setArguments(bundle);
-                return informasiKamar;
+                detilKamar.setArguments(bundle);
+                return detilKamar;
             case 3:
                 bundle.putString("jenis_kamar","Junior Suite");
-                informasiKamar.setArguments(bundle);
-                return  informasiKamar;
+                detilKamar.setArguments(bundle);
+                return  detilKamar;
             default:
                 return null;
         }
@@ -46,6 +46,6 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return mNumOfTabs;
+        return 4;
     }
 }

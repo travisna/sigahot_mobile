@@ -19,6 +19,7 @@ public class InformasiKamar extends Fragment implements TabLayout.OnTabSelectedL
     ViewPager viewPager;
 
 
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,16 +31,21 @@ public class InformasiKamar extends Fragment implements TabLayout.OnTabSelectedL
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
         tabLayout = (TabLayout) getView().findViewById(R.id.tab_layout);
+
+        getActivity().setTitle("Rincian Kamar");
 
         tabLayout.addTab(tabLayout.newTab().setText("Superior"));
         tabLayout.addTab(tabLayout.newTab().setText("Double Deluxe"));
         tabLayout.addTab(tabLayout.newTab().setText("Executive Deluxe"));
         tabLayout.addTab(tabLayout.newTab().setText("Junior Suite"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        //tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
+
+
 
         viewPager = (ViewPager) getView().findViewById(R.id.pager);
 
@@ -67,4 +73,6 @@ public class InformasiKamar extends Fragment implements TabLayout.OnTabSelectedL
     public void onTabReselected(TabLayout.Tab tab) {
 
     }
+
+
 }

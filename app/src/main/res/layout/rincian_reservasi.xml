@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="0.3">
+
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="ID Pemesanan :"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewIDPemesanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/textView19"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="P150118-141 " />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Tanggal Pemesanan"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <TextView
+            android:id="@+id/textViewTglReservasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/view15"
+            app:layout_constraintTop_toBottomOf="@+id/textViewJenisPemesanan"
+            tools:text="15 Oktober 2017" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="2.0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@color/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <TextView
+            android:id="@+id/textViewCabangDetilReser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/view15"
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            tools:text="Bandung" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Cabang"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Jenis Pemesanan"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/textViewJenisPemesanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/view15"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCabangDetilReser"
+            tools:text="Personal" />
+
+        <View
+            android:id="@+id/view15"
+            android:layout_width="1dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Tanggal Check In"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Tanggal Check Out"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textViewTglCheckInDetil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/view21"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTglReservasi"
+            tools:text="12 Desember 2017" />
+
+        <TextView
+            android:id="@+id/textViewTglCheckOutDetil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/view21"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTglCheckInDetil"
+            tools:text="2 Januari 2018" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Dewasa"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Anak - anak"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/textViewDetilAnak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/view21"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDetilDewasa"
+            tools:text="3" />
+
+        <TextView
+            android:id="@+id/textViewDetilDewasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/view21"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTglCheckOutDetil"
+            tools:text="1" />
+
+        <View
+            android:id="@+id/view17"
+            android:layout_width="match_parent"
+            android:layout_height="2.0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@color/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <View
+            android:id="@+id/view16"
+            android:layout_width="match_parent"
+            android:layout_height="2.0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:background="@color/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDetilPermintaan" />
+
+        <View
+            android:id="@+id/view21"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/divider"
+            app:layout_constraintBottom_toTopOf="@+id/view17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view15" />
+
+        <LinearLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view17">
+
+            <ListView
+                android:id="@+id/listViewKamarHarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:dividerHeight="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </ListView>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view22"
+            android:layout_width="match_parent"
+            android:layout_height="2.0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@color/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Permintaan Khusus :"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view22" />
+
+        <TextView
+            android:id="@+id/textViewDetilPermintaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView27"
+            tools:text="Dekat Jendela" />
+
+        <Button
+            android:id="@+id/buttonBatalReservasi"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/primary_dark"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Batalkan"
+            android:textColor="@color/accent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view16" />
+
+        <TextView
+            android:id="@+id/textViewHeaderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Status : "
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view16" />
+
+        <TextView
+            android:id="@+id/textViewRincianStatusReservasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="TextView"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/textViewHeaderStatus"
+            app:layout_constraintTop_toBottomOf="@+id/view16" />
+
+        <Button
+            android:id="@+id/buttonUnduhTandaTerima"
+            android:layout_width="223dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="74dp"
+            android:layout_marginStart="87dp"
+            android:layout_marginTop="84dp"
+            android:background="@color/primary_dark"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Unduh Tanda Terima"
+            android:textColor="@color/accent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view16" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

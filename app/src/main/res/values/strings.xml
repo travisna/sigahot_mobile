@@ -6,11 +6,12 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string name="masukkan_pass_baru">Masukkan password baru anda :</string>
+    <string name="Ubah_pass_instruksi">Tolong jawab pertanyaan dibawah ini dengan benar</string>
     <string name="belum_ada">Belum ada</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_informasi_hotel">InformasiHotel</string>
-
+    <string name="informasi_hotel">Grand Atma Hotels merupakan hotel bintang 3, yang terdapat di Kota Yogyakarta dan Bandung. Di Kota Yogyakarta terletak di jantung Jalan Malioboro yang ramai dan dekat dengan ikon Tugu. Menyediakan akses mudah ke pasar tradisional Beringharjo, jalan Malioboro, dan stasiun kereta api Tugu. Di Kota Bandung, terletak di pusat kota, dan menawarkan akses mudah ke beberapa tempat wisata seperti pusat perbelanjaan dan tempat hiburan utama. Para tamu dapat mencapai bandara dan stasiun kereta api dalam waktu menit. Grand Atma Hotels memiliki 125 kamar yang didesain dengan cantik. Selain itu Grand Atma Hotel juga memiliki beberapa fasilitas yang dapat digunakan oleh pelanggan dengan harga yang terjangkau.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

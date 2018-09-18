@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.savvi.rangedatepicker.CalendarPickerView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tsquare_dividerColor="@color/calendar_divider"
+        app:tsquare_headerTextColor="@color/primary" />
+
+    <Button
+        android:id="@+id/buttonCariKamar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/primary_dark"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Cari"
+        android:textColor="@color/accent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupCabang" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupCabang"
+        android:layout_width="303dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_view">
+
+        <RadioButton
+            android:id="@+id/radioButtonJogja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Yogyakarta"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBandung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Bandung"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -37,7 +37,7 @@ import java.util.List;
 
 public class LoginActivity extends AppCompatActivity {
     TextView textViewRegistrasi;
-    Button btnLogin;
+    Button btnLogin,btnUbahPass;
     EditText txtEmail,txtPassword;
     private String email,password;
     ConnectionDetector cd;
@@ -61,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.buttonLogin);
         txtEmail = findViewById(R.id.editTextLoginEmail);
         txtPassword = findViewById(R.id.editTextLoginPassword);
+        btnUbahPass = findViewById(R.id.buttonLupaPassword);
 
         email="";
         password="";
@@ -71,6 +72,16 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startLogin();
+            }
+        });
+
+        btnUbahPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, UbahPassword.class);
+
+
+                startActivity(intent);
             }
         });
 
@@ -156,7 +167,7 @@ public class LoginActivity extends AppCompatActivity {
                 loadingDialog.dismiss();
 
                 if(cd.isConnected()){
-                    if(s.equalsIgnoreCase("success")){
+                    if(s.equalsIgnoreCase("pelanggan")){
 
                         SharedPreferences.Editor editor = getSharedPreferences("userdata", MODE_PRIVATE).edit();
                         editor.putString("email_pengguna",email);
@@ -166,7 +177,17 @@ public class LoginActivity extends AppCompatActivity {
 
                         finish();
                         startActivity(intent);
-                    }else {
+                    } else if (s.equalsIgnoreCase("pegawai")) {
+                        SharedPreferences.Editor editor = getSharedPreferences("userdata", MODE_PRIVATE).edit();
+                        editor.putString("email_pengguna",email);
+                        editor.commit();
+
+                        Intent intent = new Intent(LoginActivity.this, ActivityPegawai.class);
+
+                        finish();
+                        startActivity(intent);
+
+                    } else {
                         Toast.makeText(getApplicationContext(), "Email atau Password salah", Toast.LENGTH_LONG).show();
                     }
                 }
